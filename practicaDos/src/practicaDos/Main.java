@@ -1,46 +1,45 @@
 package practicaDos;
 
-
-
 public class Main {
 
+	public static void main(String[] args) {
 
-    public static void main(String[] args) {
+		CCuenta cuentaUno;
 
-        CCuenta miCuenta;
+		double saldoActual;
 
-        double saldoActual;
+		cuentaUno = new CCuenta("Antonio López", "1000-2365-85-1230456789", 2500, 0);
 
+		saldoActual = cuentaUno.estado();
 
-        miCuenta = new CCuenta("Antonio López","1000-2365-85-1230456789",2500,0);
+		System.out.println("El saldo actual es" + saldoActual);
 
-        saldoActual = miCuenta.estado();
+		operacuenta(cuentaUno, 0);
 
-        System.out.println("El saldo actual es"+ saldoActual );
+	}
 
+	private static void operacuenta(CCuenta cuentaUno, float cantidad) {
+		try {
 
-        try {
+			cuentaUno.retirar(2300);
 
-            miCuenta.retirar(2300);
+		} catch (Exception e) {
 
-        } catch (Exception e) {
+			System.out.print("Fallo al retirar");
 
-            System.out.print("Fallo al retirar");
+		}
 
-        }
+		try {
 
-        try {
+			System.out.println("Ingreso en cuenta");
 
-            System.out.println("Ingreso en cuenta");
+			cuentaUno.ingresar(695);
 
-            miCuenta.ingresar(695);
+		} catch (Exception e) {
 
-        } catch (Exception e) {
+			System.out.print("Fallo al ingresar");
 
-            System.out.print("Fallo al ingresar");
-
-        }
-
-    }
+		}
+	}
 
 }
