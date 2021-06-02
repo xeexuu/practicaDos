@@ -2,6 +2,9 @@ package practicaDos;
 
 public class Main {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		CCuenta cuentaUno;
@@ -18,6 +21,12 @@ public class Main {
 
 	}
 
+	/**
+	 * Método que llama a los métodos de la clase CCuenta para operar
+	 * 
+	 * @param cuentaUno = objeto de la clase CCuenta
+	 * @param cantidad  = cantidad con la que operar
+	 */
 	private static void operacuenta(CCuenta cuentaUno, float cantidad) {
 		try {
 

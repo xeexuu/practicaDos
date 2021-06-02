@@ -1,6 +1,16 @@
 package practicaDos;
 
+/**
+ * @author Jesús Morgado Fernández
+ * @version 1.0
+ * @implNote Fecha: miércoles 02 de junio de 2021
+ */
+
 public class CCuenta {
+
+	/**
+	 * Atributos
+	 */
 
 	private String nombre;
 
@@ -10,12 +20,23 @@ public class CCuenta {
 
 	private double tipoInteres;
 
+	/**
+	 * Constructor por defecto
+	 */
 	public CCuenta()
 
 	{
 
 	}
 
+	/**
+	 * Constructor parametrizado
+	 * 
+	 * @param nom  = nombre del usuario
+	 * @param cue  = nombre de la cuenta
+	 * @param sal  = saldo de la cuenta
+	 * @param tipo = tipo de interés
+	 */
 	public CCuenta(String nom, String cue, double sal, double tipo)
 
 	{
@@ -26,8 +47,16 @@ public class CCuenta {
 
 		saldo = sal;
 
+		tipoInteres = tipo;
+
 	}
 
+	/**
+	 * Método que ingresa una cantidad
+	 * 
+	 * @param cantidad = cantidad a ingresar
+	 * @throws Exception = por si se produce un error, que el programa no se bloquee
+	 */
 	public void ingresar(double cantidad) throws Exception
 
 	{
@@ -40,6 +69,12 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * Método que retira una cantidad
+	 * 
+	 * @param cantidad = cantidad a retirar
+	 * @throws Exception = por si se produce un error, que el programa no se bloquee
+	 */
 	public void retirar(double cantidad) throws Exception
 
 	{
@@ -56,12 +91,20 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getNombre() {
 
 		return nombre;
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String obtenerNombre()
 
 	{
@@ -70,12 +113,20 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @param nombre
+	 */
 	public void setNombre(String nombre) {
 
 		this.nombre = nombre;
 
 	}
 
+	/**
+	 * 
+	 * @param nom
+	 */
 	public void asignarNombre(String nom)
 
 	{
@@ -84,10 +135,18 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getCuenta() {
 		return cuenta;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String obtenerCuenta()
 
 	{
@@ -96,14 +155,26 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @param cuenta
+	 */
 	public void setCuenta(String cuenta) {
 		this.cuenta = cuenta;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public double getSaldo() {
 		return saldo;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public double estado()
 
 	{
@@ -112,16 +183,28 @@ public class CCuenta {
 
 	}
 
+	/**
+	 * 
+	 * @param saldo
+	 */
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public double getTipoInteres() {
 
 		return tipoInteres;
 
 	}
 
+	/**
+	 * 
+	 * @param tipoInteres
+	 */
 	public void setTipoInteres(double tipoInteres) {
 
 		this.tipoInteres = tipoInteres;
